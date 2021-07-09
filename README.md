@@ -23,3 +23,7 @@ As funções onclick no index.html estão definidas da seguinte forma:
 Tendo isso, é só seguir os exemplos já existentes que não tem erro.
 
 Em futuras versões, pretendo adicionar um sistema para comandos com mais do que 2 argumentos.
+
+Imagem:
+
+https://i.imgur.com/wys9yLR.png
