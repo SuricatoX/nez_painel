@@ -1,0 +1,162 @@
+<html>
+	<head>
+		<title>Painel_Nez</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+		<script src="https://kit.fontawesome.com/d812223a59.js" crossorigin="anonymous"></script>
+	   	<script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<article class="content actionmenu">
+			<div class="fechar actionbutton"><i class="fas fa-times"></i></div>
+			<div id="pin" onclick="togglePin()"><i class="fas fa-thumbtack"></i></i></div>
+			<div class="main">
+				<div class="categoria">
+					<div class="click" onclick="revelar('cont_players')">
+						<h1>COMANDOS PLAYERS</h1>
+					</div>
+					<div id="cont_players">
+						<div class="comando" onclick="comandoSimples('nc')"><p>NC</p></div>
+						<div class="comando" onclick="comandoSimples('nc2')"><p>NC2</p></div>
+						<div class="comando" onclick="abrirCaixaArg('god')"><p>GOD (ID)</p></div>
+						<div class="comando" onclick="abrirCaixaArg('reviver')"><p>REVIVER (ID)</p></div>
+						<div class="comando" onclick="comandoSimples('re')"><p>RE</p></div>
+						<div class="comando" onclick="abrirCaixaArg('kick')"><p>KICK (ID)</p></div>
+						<div class="comando" onclick="abrirCaixaArg('ban')"><p>BAN (ID)</p></div>
+						<div class="comando" onclick="abrirCaixaArg('unban')"><p>UNBAN (ID)</p></div>
+						<div class="comando" onclick="abrirCaixaArg('wl')"><p>WL (ID)</p></div>
+						<div class="comando" onclick="abrirCaixaArg('unwl')"><p>UNWL (ID)</p></div>
+						<div class="comando" onclick="abrirCaixaArg('money')"><p>MONEY (QTD)</p></div>
+						<div class="comando" onclick="comandoSimples('pon')"><p>PON</p></div>
+						<div class="comando" onclick="comandoSimples('uncuff')"><p>UNCUFF</p></div>
+						<div class="comando" onclick="abrirCaixaComplexo('item')"><p>ITEM (NOME) (QTD)</p></div>
+						<div class="comando" onclick="abrirCaixaArg('arma')"><p>ARMA (NOME)</p></div>
+					</div>
+				</div>
+				<div class="categoria">
+					<div class="click" onclick="revelar('cont_tp')">
+						<h1>TELEPORTE</h1>
+					</div>
+					<div id="cont_tp">
+						<div class="comando" onclick="abrirCaixaArg('tpto')"><p>TPTO (ID)</p></div>
+						<div class="comando" onclick="comandoSimples('tpway')"><p>TPWAY</p></div>
+						<div class="comando" onclick="abrirCaixaArg('tpcds')"><p>TPCDS (CDS)</p></div>
+						<div class="comando" onclick="abrirCaixaArg('tptome')"><p>TPTOME (ID)</p></div>
+						<div class="comando" onclick="abrirCaixaArg('gps')"><p>GPS (CDS)</p></div>
+					</div>
+				</div>
+				<div class="categoria">
+					<div class="click" onclick="revelar('cont_veh')">
+						<h1>VEÍCULOS</h1>
+					</div>
+					<div id="cont_veh">
+						<div class="comando" onclick="abrirCaixaArg('car')"><p>CAR (CARRO)</p></div>
+						<div class="comando" onclick="abrirCaixaArg('alugarcar')"><p>ALUGARCAR (CARRO)</p></div>
+						<div class="comando" onclick="comandoSimples('tuning')"><p>TUNING</p></div>
+						<div class="comando" onclick="comandoSimples('fix')"><p>FIX</p></div>
+						<div class="comando" onclick="comandoSimples('dv')"><p>DV</p></div>
+						<div class="comando" onclick="comandoSimples('limpararea')"><p>LIMPARAREA</p></div>
+						<div class="comando" onclick="comandoSimples('cv')"><p>CV</p></div>
+						<div class="comando" onclick="comandoSimples('rv')"><p>RV</p></div>
+						<div class="comando" onclick="comandoSimples('sequestro')"><p>SEQUESTRO</p></div>
+					</div>
+				</div>
+				<div class="categoria">
+					<div class="click" onclick="revelar('cont_set')">
+						<h1>SETAGEM</h1>
+					</div>
+					<div id="cont_set">
+						<div class="comando" onclick="abrirCaixaArg('id')"><p>ID (ID)</p></div>
+						<div class="comando" onclick="abrirCaixaComplexo('group')"><p>GROUP (ID) (GRUPO)</p></div>
+						<div class="comando" onclick="abrirCaixaComplexo('ungroup')"><p>UNGROUP (ID) (GRUPO)</p></div>
+					</div>
+				</div>
+				<div class="caixa"></div>
+			</div>
+			<div class="teclado">
+				<div class="simbolos">
+					<div class="linha">
+						<div class="botao" onclick="inserirCaractere(',')">,</div>
+						<div class="botao" onclick="inserirCaractere('.')">.</div>
+						<div class="botao" onclick="inserirCaractere(';')">;</div>
+					</div>
+					<div class="linha">
+						<div class="botao" onclick="inserirCaractere('*')">*</div>
+						<div class="botao" onclick="inserirCaractere('|')">|</div>
+						<div class="botao" onclick="inserirCaractere('_')">_</div>
+					</div>
+					<div class="linha">
+						<div class="botao" onclick="inserirCaractere('-')">-</div>
+						<div class="botao" onclick="inserirCaractere('+')">+</div>
+						<div class="botao" onclick="inserirCaractere('/')">/</div>
+					</div>
+				</div>
+				<div class="letras">
+					<div class="linha">
+						<div class="botao" onclick="inserirCaractere('q')">q</div>
+						<div class="botao" onclick="inserirCaractere('w')">w</div>
+						<div class="botao" onclick="inserirCaractere('e')">e</div>
+						<div class="botao" onclick="inserirCaractere('r')">r</div>
+						<div class="botao" onclick="inserirCaractere('t')">t</div>
+						<div class="botao" onclick="inserirCaractere('y')">y</div>
+						<div class="botao" onclick="inserirCaractere('u')">u</div>
+						<div class="botao" onclick="inserirCaractere('i')">i</div>
+						<div class="botao" onclick="inserirCaractere('o')">o</div>
+						<div class="botao" onclick="inserirCaractere('p')">p</div>
+					</div>
+					<div class="linha">
+						<div class="botao" onclick="inserirCaractere('a')">a</div>
+						<div class="botao" onclick="inserirCaractere('s')">s</div>
+						<div class="botao" onclick="inserirCaractere('d')">d</div>
+						<div class="botao" onclick="inserirCaractere('f')">f</div>
+						<div class="botao" onclick="inserirCaractere('g')">g</div>
+						<div class="botao" onclick="inserirCaractere('h')">h</div>
+						<div class="botao" onclick="inserirCaractere('j')">j</div>
+						<div class="botao" onclick="inserirCaractere('k')">k</div>
+						<div class="botao" onclick="inserirCaractere('l')">l</div>
+						<div class="botao" onclick="inserirCaractere('ç')">ç</div>
+					</div>
+					<div class="linha">
+						<div class="botao shift" onclick="toggleShift()"><i class="fas fa-chevron-up"></i></div>
+						<div class="botao" onclick="inserirCaractere('z')">z</div>
+						<div class="botao" onclick="inserirCaractere('x')">x</div>
+						<div class="botao" onclick="inserirCaractere('c')">c</div>
+						<div class="botao" onclick="inserirCaractere('v')">v</div>
+						<div class="botao" onclick="inserirCaractere('b')">b</div>
+						<div class="botao" onclick="inserirCaractere('n')">n</div>
+						<div class="botao" onclick="inserirCaractere('m')">m</div>
+						<div class="botao apagar" onclick="apagarCaractere()"><i class="fas fa-backspace"></i></div>
+					</div>
+					<div class="linha">
+						<div class="botao copiar" onclick="copiarTexto()"><i class="fas fa-copy"></i></div>
+						<div class="botao espaco" onclick="inserirCaractere(' ')"></div>
+						<div class="botao enviar" onclick="$('.aceitar').trigger('click');"><i class="fas fa-check"></i></div>
+					</div>
+				</div>
+				<div class="numeros">
+					<div class="linha">
+						<div class="botao" onclick="inserirCaractere('1')">1</div>
+						<div class="botao" onclick="inserirCaractere('2')">2</div>
+						<div class="botao" onclick="inserirCaractere('3')">3</div>
+					</div>
+					<div class="linha">
+						<div class="botao" onclick="inserirCaractere('4')">4</div>
+						<div class="botao" onclick="inserirCaractere('5')">5</div>
+						<div class="botao" onclick="inserirCaractere('6')">6</div>
+					</div>
+					<div class="linha">
+						<div class="botao" onclick="inserirCaractere('7')">7</div>
+						<div class="botao" onclick="inserirCaractere('8')">8</div>
+						<div class="botao" onclick="inserirCaractere('9')">9</div>
+					</div>
+					<div class="linha">
+						<div class="botao zero" onclick="inserirCaractere('0')">0</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<script src="jquery.js" type="text/javascript"></script>
+	</body>
+</html>
