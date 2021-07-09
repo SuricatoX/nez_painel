@@ -5,7 +5,7 @@
 	##						Créditos: JeanNeez#1017							##
 	##																		##
 	##				Esse script é disponibilizado gratuitamente em:			##
-	##					https://github.com/JeanNeez/nez_painel.git			##
+	##					https://github.com/JeanNeez/nez_painel				##
 	##																		##
 	##					Está proibida a venda desse script.					##
 	##########################################################################
