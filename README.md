@@ -9,6 +9,10 @@ Pensando nisso, desenvolvi um painel simples com comandos clicáveis e um teclad
 
 Por ser uma questão de acessibilidade, estou disponibilizando o sistema gratuitamente e com o código aberto na esperança de que possa ajudar outras pessoas que tenham dificuldades parecidas com a dele ou até mesmo influenciar a comunidade a pensar nessas pessoas quando forem desenvolver seus scripts. Poranto, peço encarecidamente que não vendam esse script.
 
+Comando padrão para acessar o painel: /coelho (Pode ser alterado no config.lua).
+
+Permissão padrão para acessar o painel: 'admin.permissao' (Pode ser alterado no config.lua).
+
 Para fazer alterações:
 
 O script está com o código todo aberto, portanto é possível adicionar, alterar e remover qualquer elemento constante nele.
