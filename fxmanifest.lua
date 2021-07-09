@@ -1,17 +1,3 @@
---[[
-	##########################################################################
-	##					Painel acessível para administração.				##
-	##																		##
-	##						Créditos: JeanNeez#1017							##
-	##																		##
-	##				Esse script é disponibilizado gratuitamente em:			##
-	##					https://github.com/JeanNeez/nez_painel				##
-	##																		##
-	##					Está proibida a venda desse script.					##
-	##########################################################################
-
-]]
-
 fx_version 'cerulean'
 game 'gta5'
 
@@ -37,3 +23,17 @@ files{
     "nui/style.css",
     "nui/jquery.js"
 }
+
+--[[
+	##########################################################################
+	##					Painel acessível para administração.				##
+	##																		##
+	##						Créditos: JeanNeez#1017							##
+	##																		##
+	##				Esse script é disponibilizado gratuitamente em:			##
+	##					https://github.com/JeanNeez/nez_painel				##
+	##																		##
+	##					Está proibida a venda desse script.					##
+	##########################################################################
+
+]]
